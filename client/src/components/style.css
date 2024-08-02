@@ -373,50 +373,94 @@ button.unfavorite:hover {
     background-color: #c82333; 
 } 
 
-.new-recipe-form {
-    max-width: 800px;
-    margin: 0 auto;
+.recipe-form-container {
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #D27D2D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.recipe-form-header {
     text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
     color: #333;
+}
+
+.form-group {
     margin-bottom: 20px;
 }
 
-label {
+.form-group label {
     display: block;
-    margin: 15px 0 5px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
 }
 
-input, textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 16px;
+    color: #333;
 }
 
-textarea {
-    height: 150px;
-    resize: vertical;
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: white;
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
     background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 4px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-button:hover {
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
     background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-primary:disabled {
+    background-color: #007bff;
+    border-color: #007bff;
+    opacity: 0.65;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }

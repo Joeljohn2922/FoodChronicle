@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 
 
-const RecipeForm = ({ userId, setNewRecipe }) => {
+const RecipeForm = ({ setNewRecipe }) => {
 
   // handles form submission
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
@@ -19,7 +19,7 @@ const RecipeForm = ({ userId, setNewRecipe }) => {
           ingredients: values.ingredients,
           instructions: values.instructions,
           tag: values.tag,
-          user_id: userId,
+          
         }),
       });
 
@@ -57,7 +57,7 @@ const RecipeForm = ({ userId, setNewRecipe }) => {
           ingredients: '',
           instructions: '', 
           tags: '',
-          user_id: userId,
+          
         }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
