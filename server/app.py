@@ -224,7 +224,14 @@ class Login(Resource):
             return make_response(user.to_dict(), 201) 
         else: 
             return make_response({'error': 'Invalid password'}, 400) 
-api.add_resource(Login, '/login')
+api.add_resource(Login, '/login') 
+
+class Logout(Resource):
+    def delete(self):
+        session['user_id'] = None
+        return make_response({}, 204)
+
+api.add_resource(Logout, '/logout')
 
 
 if __name__ == '__main__':
